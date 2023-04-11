@@ -14,7 +14,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
     @Query(value = "SELECT * FROM employee", nativeQuery = true)
     List<Employee> findAllNative();
 
-    @Query(value = "SELECT * FROM employee t WHERE t.ID LIKE  %?1%", nativeQuery = true)
+    @Query(value = "SELECT * FROM employee t WHERE t.ID LIKE  ?1", nativeQuery = true)
     Employee findByProductIDEqualsNative(int ProductID);
 
 }

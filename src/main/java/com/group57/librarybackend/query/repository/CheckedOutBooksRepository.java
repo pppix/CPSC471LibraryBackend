@@ -14,7 +14,7 @@ public interface CheckedOutBooksRepository extends JpaRepository<CheckedOutBooks
     @Query(value = "SELECT * FROM checked_out_books", nativeQuery = true)
     List<CheckedOutBooks> findAllNative();
 
-    @Query(value = "SELECT * FROM checked_out_books t WHERE t.BookCID LIKE  %?1%", nativeQuery = true)
+    @Query(value = "SELECT * FROM checked_out_books t WHERE t.BookCID LIKE  ?1", nativeQuery = true)
     CheckedOutBooks findByProductIDEqualsNative(int ProductID);
 
 }

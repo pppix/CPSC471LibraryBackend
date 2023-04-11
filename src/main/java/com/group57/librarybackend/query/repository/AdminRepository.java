@@ -14,7 +14,7 @@ public interface AdminRepository extends JpaRepository<Admin, Integer>{
     @Query(value = "SELECT * FROM admin", nativeQuery = true)
     List<Admin> findAllNative();
 
-    @Query(value = "SELECT * FROM admin t WHERE t.ID LIKE  %?1%", nativeQuery = true)
+    @Query(value = "SELECT * FROM admin t WHERE t.ID LIKE  ?1", nativeQuery = true)
     Admin findByProductIDEqualsNative(int ProductID);
 
 }

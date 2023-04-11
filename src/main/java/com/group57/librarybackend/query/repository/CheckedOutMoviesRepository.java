@@ -14,7 +14,7 @@ public interface CheckedOutMoviesRepository extends JpaRepository<CheckedOutMovi
     @Query(value = "SELECT * FROM checked_out_movies", nativeQuery = true)
     List<CheckedOutMovies> findAllNative();
 
-    @Query(value = "SELECT * FROM checked_out_movies t WHERE t.MovieCID LIKE  %?1%", nativeQuery = true)
+    @Query(value = "SELECT * FROM checked_out_movies t WHERE t.MovieCID LIKE  ?1", nativeQuery = true)
     CheckedOutMovies findByProductIDEqualsNative(int ProductID);
 
 }
