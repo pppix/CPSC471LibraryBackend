@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.group57.librarybackend.query.model.*;
 
 @Repository
-public interface CheckedOutBooksRepository extends JpaRepository<CheckedOutBooks, Integer>{
+public interface CheckedOutBooksRepository extends JpaRepository<CheckedOutBooks, CheckedOutBooksID>{
 
     @Query(value = "SELECT * FROM checked_out_books", nativeQuery = true)
     List<CheckedOutBooks> findAllNative();

@@ -3,15 +3,14 @@ package com.group57.librarybackend.query.model;
 import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot 3
 
 @Entity
+@IdClass(CheckedOutJournalsID.class)
 @Table(name = "checked_out_journals")
 public class CheckedOutJournals {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int journalID;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int journalCID;
 
     private String dueDate;

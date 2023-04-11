@@ -1,12 +1,12 @@
 com\group57\librarybackend\query\model\Book.class
 com\group57\librarybackend\query\model\CheckedOutJournals.class
 com\group57\librarybackend\query\repository\BookRepository.class
-com\group57\librarybackend\query\model\CheckedOutMovies.class
 com\group57\librarybackend\query\model\Journal.class
+com\group57\librarybackend\query\model\CheckedOutBooks.class
+com\group57\librarybackend\query\model\CheckedOutMovies.class
 com\group57\librarybackend\query\model\Admin.class
 com\group57\librarybackend\query\model\Dependant.class
 com\group57\librarybackend\query\LibrarybackendApplication.class
-com\group57\librarybackend\query\model\CheckedOutBooks.class
 com\group57\librarybackend\query\model\Customer.class
 com\group57\librarybackend\query\model\Employee.class
 com\group57\librarybackend\query\model\Movie.class
