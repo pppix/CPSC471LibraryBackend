@@ -18,6 +18,9 @@
 --
 -- Table structure for table `admin`
 --
+DROP DATABASE IF EXISTS `cpsc471libraryproject`;
+CREATE DATABASE `cpsc471libraryproject`;
+USE `cpsc471libraryproject`;
 
 DROP TABLE IF EXISTS `admin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -317,3 +320,4 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-04-11  3:01:05
+
