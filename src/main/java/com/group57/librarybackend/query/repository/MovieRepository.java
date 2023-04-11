@@ -14,4 +14,7 @@ public interface MovieRepository extends JpaRepository<Movie, Integer>{
     @Query(value = "SELECT * FROM movie", nativeQuery = true)
     List<Movie> findAllNative();
 
+    @Query(value = "SELECT * FROM movie t WHERE t.ProductID LIKE  %?1%", nativeQuery = true)
+    Movie findByProductIDEqualsNative(int ProductID);
+
 }

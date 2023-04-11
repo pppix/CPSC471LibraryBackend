@@ -25,7 +25,7 @@ public class LibrarybackendApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// call Repository methods here
-		List<Book> myList = bookRepository.findAllNative();
-		System.out.println(myList.get(0).title);
+		Book myBook = bookRepository.findByProductIDEqualsNative(2);
+		System.out.println(myBook.title);
 	}
 }

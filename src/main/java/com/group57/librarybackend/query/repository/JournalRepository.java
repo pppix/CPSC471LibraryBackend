@@ -14,4 +14,7 @@ public interface JournalRepository extends JpaRepository<Journal, Integer>{
     @Query(value = "SELECT * FROM journal", nativeQuery = true)
     List<Journal> findAllNative();
 
+    @Query(value = "SELECT * FROM journal t WHERE t.ProductID LIKE  %?1%", nativeQuery = true)
+    Journal findByProductIDEqualsNative(int ProductID);
+
 }
