@@ -57,7 +57,6 @@ CREATE TABLE `book` (
   `Genre` varchar(45) NOT NULL,
   `Author` varchar(45) NOT NULL,
   `Count` int NOT NULL,
-  `book_adminid` int NOT NULL,
   PRIMARY KEY (`ProductID`),
   KEY `BookAdminID_idx` (`BookAdminID`),
   CONSTRAINT `BookAdminID` FOREIGN KEY (`BookAdminID`) REFERENCES `admin` (`ID`)
@@ -70,7 +69,8 @@ CREATE TABLE `book` (
 
 LOCK TABLES `book` WRITE;
 /*!40000 ALTER TABLE `book` DISABLE KEYS */;
-INSERT INTO `book` VALUES (1,'To Kill a Mockingbird','Available',1,'Bildungsroman','Harper Lee',1,0);
+INSERT INTO `book` VALUES (1,'To Kill a Mockingbird','Available',1,'Bildungsroman','Harper Lee',1);
+INSERT INTO `book` VALUES (2,'1984','Available',1,'Dystopian Fiction','George Orwell',1);
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,9 +87,6 @@ CREATE TABLE `checked_out_books` (
   `DueDate` varchar(45) NOT NULL,
   `BorrowDate` varchar(45) NOT NULL,
   `OverDueFee` varchar(45) NOT NULL,
-  `borrow_date` varchar(255) DEFAULT NULL,
-  `due_date` varchar(255) DEFAULT NULL,
-  `over_due_fee` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`BookID`,`BookCID`),
   KEY `BookCID_idx` (`BookCID`),
   CONSTRAINT `BookCID` FOREIGN KEY (`BookCID`) REFERENCES `customer` (`CustID`),
@@ -119,9 +116,6 @@ CREATE TABLE `checked_out_journals` (
   `DueDate` varchar(45) NOT NULL,
   `BorrowDate` varchar(45) NOT NULL,
   `OverDueFee` varchar(45) NOT NULL,
-  `borrow_date` varchar(255) DEFAULT NULL,
-  `due_date` varchar(255) DEFAULT NULL,
-  `over_due_fee` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`JournalID`,`JournalCID`),
   KEY `JournalCID_idx` (`JournalCID`),
   CONSTRAINT `JournalCID` FOREIGN KEY (`JournalCID`) REFERENCES `customer` (`CustID`),
@@ -151,9 +145,6 @@ CREATE TABLE `checked_out_movies` (
   `DueDate` varchar(45) NOT NULL,
   `BorrowDate` varchar(45) NOT NULL,
   `OverDueFee` varchar(45) NOT NULL,
-  `borrow_date` varchar(255) DEFAULT NULL,
-  `due_date` varchar(255) DEFAULT NULL,
-  `over_due_fee` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`MovieID`,`MovieCID`),
   KEY `MovieCID_idx` (`MovieCID`),
   CONSTRAINT `MovieCID` FOREIGN KEY (`MovieCID`) REFERENCES `customer` (`CustID`),
@@ -181,7 +172,6 @@ CREATE TABLE `customer` (
   `CustID` int NOT NULL,
   `PhoneNum` varchar(45) NOT NULL,
   `Name` varchar(45) NOT NULL,
-  `phone_num` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`CustID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -205,7 +195,6 @@ DROP TABLE IF EXISTS `dependant`;
 CREATE TABLE `dependant` (
   `EID` int NOT NULL,
   `FirstName` varchar(45) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
   PRIMARY KEY (`EID`,`FirstName`),
   CONSTRAINT `EID` FOREIGN KEY (`EID`) REFERENCES `employee` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -231,8 +220,6 @@ CREATE TABLE `employee` (
   `ID` int NOT NULL,
   `FirstName` varchar(45) NOT NULL,
   `LastName` varchar(45) NOT NULL,
-  `first_name` varchar(255) DEFAULT NULL,
-  `last_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -243,7 +230,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
-INSERT INTO `employee` VALUES (1,'John','Smith',NULL,NULL);
+INSERT INTO `employee` VALUES (1,'John','Smith');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -262,7 +249,6 @@ CREATE TABLE `journal` (
   `Genre` varchar(45) NOT NULL,
   `Author` varchar(45) NOT NULL,
   `Count` int NOT NULL,
-  `journal_adminid` int NOT NULL,
   PRIMARY KEY (`ProductID`),
   KEY `JournalAdminID_idx` (`JournalAdminID`),
   CONSTRAINT `JournalAdminID` FOREIGN KEY (`JournalAdminID`) REFERENCES `admin` (`ID`)
@@ -294,7 +280,6 @@ CREATE TABLE `movie` (
   `MovieAdminID` int NOT NULL,
   `Genre` varchar(45) NOT NULL,
   `Count` int NOT NULL,
-  `movie_adminid` int NOT NULL,
   PRIMARY KEY (`ProductID`),
   KEY `AdminID_idx` (`MovieAdminID`),
   CONSTRAINT `MovieAdminID` FOREIGN KEY (`MovieAdminID`) REFERENCES `admin` (`ID`)
