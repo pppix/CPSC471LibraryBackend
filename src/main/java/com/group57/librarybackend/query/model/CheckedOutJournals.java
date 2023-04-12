@@ -8,16 +8,16 @@ import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot
 public class CheckedOutJournals {
     
     @Id
-    private int journalID;
+    public int journalID;
 
     @Id
-    private int journalCID;
+    public int journalCID;
 
-    private String dueDate;
+    public String dueDate;
 
-    private String borrowDate;
+    public String borrowDate;
 
-    private String overDueFee;
+    public String overDueFee;
 
     public CheckedOutJournals(){
 

@@ -8,11 +8,11 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int custID;
+    public int custID;
     
-    private String phoneNum;
+    public String phoneNum;
 
-    private String name;
+    public String name;
 
     public Customer(){
 

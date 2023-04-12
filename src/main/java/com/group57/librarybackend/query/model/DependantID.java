@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class DependantID implements Serializable {
     
-    private int EID;
+    public int EID;
 
-    private String firstName;
+    public String firstName;
 
     public DependantID(){
 

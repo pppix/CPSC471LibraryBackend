@@ -8,10 +8,10 @@ import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot
 public class Dependant {
     
     @Id
-    private int EID;
+    public int EID;
 
     @Id
-    private String firstName;
+    public String firstName;
 
     public Dependant(){
 

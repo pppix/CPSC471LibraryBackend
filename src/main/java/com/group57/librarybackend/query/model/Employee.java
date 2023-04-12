@@ -8,9 +8,9 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int ID;
-    private String firstName;
-    private String lastName;
+    public int ID;
+    public String firstName;
+    public String lastName;
 
     public Employee(){
 

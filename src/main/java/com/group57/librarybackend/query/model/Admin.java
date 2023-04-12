@@ -8,7 +8,7 @@ public class Admin {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int ID;
+    public int ID;
 
     public Admin(){
 

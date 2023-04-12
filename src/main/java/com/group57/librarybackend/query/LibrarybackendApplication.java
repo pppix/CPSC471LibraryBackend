@@ -27,5 +27,8 @@ public class LibrarybackendApplication implements CommandLineRunner{
 		// call Repository methods here
 		Book myBook = bookRepository.findByProductIDEqualsNative(2);
 		System.out.println(myBook.title);
+		//bookRepository.reserveBookNative(1);
+		// bookRepository.addBookNative(3, "test", "Available", 1, "none", "none", 1);
+		// bookRepository.save(newBook);
 	}
 }

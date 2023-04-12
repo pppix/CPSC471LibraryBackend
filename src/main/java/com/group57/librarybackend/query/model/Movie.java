@@ -8,21 +8,21 @@ public class Movie {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int productID;
+    public int productID;
 
-    private String title;
+    public String title;
 
-    private String director;
+    public String director;
     
-    private int length;
+    public int length;
 
-    private String status;
+    public String status;
 
-    private int movieAdminID;
+    public int movieAdminID;
 
-    private String genre;
+    public String genre;
 
-    private int count;
+    public int count;
     
     public Movie(){
 

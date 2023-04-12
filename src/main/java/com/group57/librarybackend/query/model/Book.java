@@ -8,18 +8,24 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int productID;
-
+    public int productID;
+    
+    @Column(name = "Title")
     public String title;
 
+    @Column(name = "Status")
     public String status;
 
+    @JoinColumn(name = "BookAdminID")
     public int bookAdminID;
 
+    @Column(name = "Genre")
     public String genre;
 
+    @Column(name = "Author")
     public String author;
 
+    @Column(name = "Count")
     public int count;
     
     public Book(){
@@ -30,8 +36,8 @@ public class Book {
 
         this.productID = productID;
         this.title = title;
-        this. status = status;
-        this. bookAdminID = bookAdminID;
+        this.status = status;
+        this.bookAdminID = bookAdminID;
         this.genre = genre;
         this.author = author;
         this.count = count;

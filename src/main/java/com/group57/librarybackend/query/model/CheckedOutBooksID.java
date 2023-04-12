@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class CheckedOutBooksID implements Serializable {
         
-    private int bookID;
+    public int bookID;
 
-    private int bookCID;
+    public int bookCID;
 
     public CheckedOutBooksID(){
 
