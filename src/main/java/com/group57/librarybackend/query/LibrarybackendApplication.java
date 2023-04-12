@@ -18,7 +18,8 @@ public class LibrarybackendApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		SpringApplication.run(LibrarybackendApplication.class, args);
 	}
-
+	@Autowired(required = false)
+	CustomerRepository customerRepo;
 	@Override
 	public void run(String... args) throws Exception {
 		// call Repository methods here

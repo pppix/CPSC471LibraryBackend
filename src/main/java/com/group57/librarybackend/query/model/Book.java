@@ -8,7 +8,7 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int productID;
+    public int productID;
 
     public String title;
 

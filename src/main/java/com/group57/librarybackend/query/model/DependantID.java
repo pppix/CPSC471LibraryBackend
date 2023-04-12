@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class DependantID implements Serializable {
     
-    private int EID;
+    public int EID;
 
-    private String firstName;
+    public String firstname;
 
     public DependantID(){
 
@@ -14,7 +14,7 @@ public class DependantID implements Serializable {
 
     public DependantID(int EID, String firstName){
         this.EID = EID;
-        this.firstName = firstName;
+        this.firstname = firstName;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class DependantID implements Serializable {
             return false;
         }
         DependantID argument = (DependantID)o;
-        boolean firstNameEquals = (this.firstName == null && argument.firstName == null) || (this.firstName != null && this.firstName.equals(argument.firstName));
+        boolean firstNameEquals = (this.firstname == null && argument.firstname == null) || (this.firstname != null && this.firstname.equals(argument.firstname));
         return this.EID == argument.EID && firstNameEquals;
     }
 
@@ -36,8 +36,8 @@ public class DependantID implements Serializable {
         if ((Integer)EID != null) {
             result = 31 * result + EID;
         }
-        if (firstName != null) {
-            result = 31 * result + firstName.hashCode();
+        if (firstname != null) {
+            result = 31 * result + firstname.hashCode();
         }
         return result;
     }

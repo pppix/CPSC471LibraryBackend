@@ -8,19 +8,19 @@ public class Journal {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int productID;
+    public int productID;
 
     public String title;
 
-    private String status;
+    public String status;
 
-    private int journalAdminID;
+    public int journalAdminID;
 
-    private String genre;
+    public String genre;
 
-    private String author;
+    public String author;
 
-    private int count;
+    public int count;
     
     public Journal(){
 

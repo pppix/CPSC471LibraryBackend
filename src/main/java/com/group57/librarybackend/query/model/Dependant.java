@@ -8,10 +8,10 @@ import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot
 public class Dependant {
     
     @Id
-    private int EID;
+    public int EID;
 
     @Id
-    private String firstName;
+    public String firstname;
 
     public Dependant(){
 
@@ -19,6 +19,6 @@ public class Dependant {
 
     public Dependant(int EID, String firstName){
         this.EID = EID;
-        this.firstName = firstName;
+        this.firstname = firstName;
     }
 }

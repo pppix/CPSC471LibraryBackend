@@ -11,13 +11,12 @@ public class CheckedOutBooks {
     public int bookID;
 
     @Id
-    private int bookCID;
+    public int bookCID;
+    public String duedate;
 
-    public String dueDate;
+    public String borrowdate;
 
-    public String borrowDate;
-
-    public String overDueFee;
+    public String overduefee;
 
     public CheckedOutBooks(){
 
@@ -26,9 +25,9 @@ public class CheckedOutBooks {
     public CheckedOutBooks(int bookID, int bookCID, String dueDate, String borrowDate, String overDueFee){
         this.bookID = bookID;
         this.bookCID = bookCID;
-        this.dueDate = dueDate;
-        this.borrowDate = borrowDate;
-        this.overDueFee = overDueFee;
+        this.duedate = dueDate;
+        this.borrowdate = borrowDate;
+        this.overduefee = overDueFee;
     }
 
 }

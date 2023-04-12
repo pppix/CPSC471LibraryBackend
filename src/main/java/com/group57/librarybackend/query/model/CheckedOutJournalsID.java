@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class CheckedOutJournalsID implements Serializable {
         
-    private int journalID;
+    public int journalID;
 
-    private int journalCID;
+    public int journalCID;
 
     public CheckedOutJournalsID(){
 

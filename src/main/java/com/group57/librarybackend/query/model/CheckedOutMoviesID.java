@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class CheckedOutMoviesID implements Serializable {
         
-    private int movieID;
+    public int movieID;
 
-    private int movieCID;
+    public int movieCID;
 
     public CheckedOutMoviesID(){
 

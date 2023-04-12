@@ -11,13 +11,13 @@ public class CheckedOutMovies {
     public int movieID;
 
     @Id
-    private int movieCID;
+    public int movieCID;
 
-    public String dueDate;
+    public String duedate;
 
-    public String borrowDate;
+    public String borrowdate;
 
-    public String overDueFee;
+    public String overduefee;
 
     public CheckedOutMovies(){
 
@@ -26,9 +26,9 @@ public class CheckedOutMovies {
     public CheckedOutMovies(int movieID, int movieCID, String dueDate, String borrowDate, String overDueFee){
         this.movieID = movieID;
         this.movieCID = movieCID;
-        this.dueDate = dueDate;
-        this.borrowDate = borrowDate;
-        this.overDueFee = overDueFee;
+        this.duedate = dueDate;
+        this.borrowdate = borrowDate;
+        this.overduefee = overDueFee;
     }
     
 }
