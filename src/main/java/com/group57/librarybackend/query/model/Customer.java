@@ -4,10 +4,11 @@ import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot
 
 @Entity
 @Table(name = "customer")
+@SequenceGenerator(name="customer_id_seq", initialValue=103, allocationSize=400)
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="customer_id_seq")
     public int custID;
 
     public String phonenum;

@@ -223,4 +223,42 @@ public class LibraryController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @PutMapping(value = "/productregis")
+    public ResponseEntity bookProduct(@RequestBody String id){
+        try {
+
+            int idInt = Integer.parseInt(id);
+            List<Book> book = bookRepo.findByProductIDEqualsNative(idInt);
+            List<Movie> movie = movieRepo.findByProductIDEqualsNative(idInt);
+            List<Journal> journal = journalRepo.findByProductIDEqualsNative(idInt);
+
+            if(!journal.isEmpty()){
+                journalRepo.reserveJournalNative(idInt);
+                return new ResponseEntity<>(HttpStatus.OK);
+            }else if(!movie.isEmpty()){
+                movieRepo.reserveMovieNative(idInt);
+                return new ResponseEntity<>(HttpStatus.OK);
+            }else if(!book.isEmpty()){
+
+                bookRepo.reserveBookNative(idInt);
+                return new ResponseEntity<>(HttpStatus.OK);
+            }else{
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping(value = "signup")
+    public ResponseEntity register(@RequestBody Customer customer){
+        try {
+            customerRepo.save(customer);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
+
