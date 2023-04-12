@@ -15,20 +15,14 @@ import java.util.List;
 @ComponentScan(basePackages = {"com.group57.librarybackend.query"})
 public class LibrarybackendApplication implements CommandLineRunner{
 
-	@Autowired
-	BookRepository bookRepository;
-
 	public static void main(String[] args) {
 		SpringApplication.run(LibrarybackendApplication.class, args);
 	}
-
+	@Autowired(required = false)
+	CustomerRepository customerRepo;
 	@Override
 	public void run(String... args) throws Exception {
 		// call Repository methods here
-		Book myBook = bookRepository.findByProductIDEqualsNative(2);
-		System.out.println(myBook.title);
-		//bookRepository.reserveBookNative(1);
-		// bookRepository.addBookNative(3, "test", "Available", 1, "none", "none", 1);
-		// bookRepository.save(newBook);
+
 	}
 }

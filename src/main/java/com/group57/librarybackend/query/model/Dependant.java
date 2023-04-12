@@ -11,7 +11,8 @@ public class Dependant {
     public int EID;
 
     @Id
-    public String firstName;
+    public String firstname;
+
 
     public Dependant(){
 
@@ -19,6 +20,6 @@ public class Dependant {
 
     public Dependant(int EID, String firstName){
         this.EID = EID;
-        this.firstName = firstName;
+        this.firstname = firstName;
     }
 }

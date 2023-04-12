@@ -15,12 +15,14 @@ com\group57\librarybackend\query\model\Admin.class
 com\group57\librarybackend\query\model\Dependant.class
 com\group57\librarybackend\query\LibrarybackendApplication.class
 com\group57\librarybackend\query\model\CheckedOutMoviesID.class
+com\group57\librarybackend\query\model\Overdue.class
 com\group57\librarybackend\query\model\Customer.class
 com\group57\librarybackend\query\repository\CustomerRepository.class
 com\group57\librarybackend\query\model\Employee.class
 com\group57\librarybackend\query\model\CheckedOutBooksID.class
 com\group57\librarybackend\query\repository\EmployeeRepository.class
 com\group57\librarybackend\query\model\CheckedOutJournalsID.class
+com\group57\librarybackend\query\model\Pickup.class
 com\group57\librarybackend\query\repository\CheckedOutBooksRepository.class
 com\group57\librarybackend\query\repository\AdminRepository.class
 com\group57\librarybackend\query\model\Movie.class

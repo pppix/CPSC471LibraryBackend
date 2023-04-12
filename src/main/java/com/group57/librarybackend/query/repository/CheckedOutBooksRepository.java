@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 import com.group57.librarybackend.query.model.*;
 
 @Repository
-public interface CheckedOutBooksRepository extends JpaRepository<CheckedOutBooks, CheckedOutBooksID>{
+public interface CheckedOutBooksRepository extends JpaRepository<CheckedOutBooks, Integer>{
 
     @Query(value = "SELECT * FROM checked_out_books", nativeQuery = true)
     List<CheckedOutBooks> findAllNative();
 
     @Query(value = "SELECT * FROM checked_out_books t WHERE t.BookCID LIKE  ?1", nativeQuery = true)
-    CheckedOutBooks findByProductIDEqualsNative(int ProductID);
+    List<CheckedOutBooks> findByProductIDEqualsNative(int BookCID);
 
 }

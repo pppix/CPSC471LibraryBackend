@@ -9,8 +9,9 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int ID;
-    public String firstName;
-    public String lastName;
+    public String firstname;
+    public String lastname;
+
 
     public Employee(){
 
@@ -19,7 +20,7 @@ public class Employee {
     public Employee(int ID, String firstName, String lastName){
 
         this.ID = ID;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstName;
+        this.lastname = lastName;
     }
 }

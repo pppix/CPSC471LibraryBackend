@@ -9,6 +9,7 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int productID;
+
     
     @Column(name = "Title")
     public String title;
