@@ -14,4 +14,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer>{
     @Query(value = "SELECT * FROM customer", nativeQuery = true)
     List<Customer> findAllNative();
 
+    @Query(value = "SELECT * FROM customer t WHERE t.CustID LIKE  ?1", nativeQuery = true)
+    Customer findByProductIDEqualsNative(int ProductID);
 }

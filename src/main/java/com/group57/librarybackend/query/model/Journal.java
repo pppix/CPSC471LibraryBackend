@@ -10,7 +10,7 @@ public class Journal {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int productID;
 
-    private String title;
+    public String title;
 
     private String status;
 

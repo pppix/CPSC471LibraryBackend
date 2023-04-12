@@ -15,6 +15,6 @@ public interface CheckedOutJournalsRepository extends JpaRepository<CheckedOutJo
     List<CheckedOutJournals> findAllNative();
 
     @Query(value = "SELECT * FROM checked_out_journals t WHERE t.JournalCID LIKE  ?1", nativeQuery = true)
-    CheckedOutJournals findByProductIDEqualsNative(int ProductID);
+    List<CheckedOutJournals> findByProductIDEqualsNative(int ProductID);
 
 }

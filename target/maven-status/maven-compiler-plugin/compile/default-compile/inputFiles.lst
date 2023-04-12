@@ -19,6 +19,8 @@ E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\qu
 E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\model\CheckedOutBooks.java
 E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\model\Dependant.java
 E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\repository\JournalRepository.java
+E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\model\Overdue.java
+E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\model\Pickup.java
 E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\model\Customer.java
 E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\repository\DependantRepository.java
 E:\GithubPulls\CPSC471LibraryBackend\src\main\java\com\group57\librarybackend\query\LibrarybackendApplication.java
