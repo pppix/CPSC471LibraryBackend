@@ -4,17 +4,18 @@ import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot
 
 @Entity
 @Table(name = "journal")
+@SequenceGenerator(name="journal_id_seq", initialValue=202, allocationSize=98)
 public class Journal {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="journal_id_seq")
     public int productID;
 
     public String title;
 
     public String status;
 
-    public int journalAdminID;
+    public int journaladminid;
 
     public String genre;
 
@@ -31,7 +32,7 @@ public class Journal {
         this.productID = productID;
         this.title = title;
         this. status = status;
-        this. journalAdminID = journalAdminID;
+        this. journaladminid = journalAdminID;
         this.genre = genre;
         this.author = author;
         this.count = count;

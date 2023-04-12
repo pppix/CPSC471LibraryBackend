@@ -4,10 +4,11 @@ import jakarta.persistence.*; // import jakarta.persistence.*; // for SpringBoot
 
 @Entity
 @Table(name = "book")
+@SequenceGenerator(name="book_id_seq", initialValue=3, allocationSize=96)
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="book_id_seq")
     public int productID;
 
     
@@ -18,7 +19,7 @@ public class Book {
     public String status;
 
     @JoinColumn(name = "BookAdminID")
-    public int bookAdminID;
+    public int bookadminid;
 
     @Column(name = "Genre")
     public String genre;
@@ -38,7 +39,7 @@ public class Book {
         this.productID = productID;
         this.title = title;
         this.status = status;
-        this.bookAdminID = bookAdminID;
+        this.bookadminid = bookAdminID;
         this.genre = genre;
         this.author = author;
         this.count = count;
