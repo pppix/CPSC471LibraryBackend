@@ -12,11 +12,13 @@ public class CheckedOutBooks {
 
     @Id
     public int bookCID;
+
     public String duedate;
 
     public String borrowdate;
 
     public String overduefee;
+
 
     public CheckedOutBooks(){
 

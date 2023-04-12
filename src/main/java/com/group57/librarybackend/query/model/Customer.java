@@ -9,8 +9,9 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int custID;
-    
+
     public String phonenum;
+
 
     public String name;
 

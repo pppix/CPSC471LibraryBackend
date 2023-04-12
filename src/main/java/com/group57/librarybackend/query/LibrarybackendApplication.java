@@ -23,11 +23,6 @@ public class LibrarybackendApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// call Repository methods here
-		//List<CheckedOutBooks> myBook = checkedOutBooksRepo.findAllNative();
-		//for(CheckedOutBooks val : myBook){
-			//System.out.println(val.dueDate);
-		//}
-
 
 	}
 }

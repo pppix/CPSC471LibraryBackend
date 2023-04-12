@@ -19,6 +19,7 @@ public class CheckedOutJournals {
 
     public String overduefee;
 
+
     public CheckedOutJournals(){
 
     }

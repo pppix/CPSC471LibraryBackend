@@ -100,6 +100,8 @@ CREATE TABLE `checked_out_books` (
 
 LOCK TABLES `checked_out_books` WRITE;
 /*!40000 ALTER TABLE `checked_out_books` DISABLE KEYS */;
+INSERT INTO `checked_out_books` VALUES (2,1,'2023-03-28','2023-03-02', '$15.00');
+INSERT INTO `checked_out_books` VALUES (1,2,'2023-03-15','2023-02-20', '$15.00');
 /*!40000 ALTER TABLE `checked_out_books` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -129,6 +131,7 @@ CREATE TABLE `checked_out_journals` (
 
 LOCK TABLES `checked_out_journals` WRITE;
 /*!40000 ALTER TABLE `checked_out_journals` DISABLE KEYS */;
+INSERT INTO `checked_out_journals` VALUES (201,2,'2023-03-15','2023-02-20', '$15.00');
 /*!40000 ALTER TABLE `checked_out_journals` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,6 +161,7 @@ CREATE TABLE `checked_out_movies` (
 
 LOCK TABLES `checked_out_movies` WRITE;
 /*!40000 ALTER TABLE `checked_out_movies` DISABLE KEYS */;
+INSERT INTO `checked_out_movies` VALUES (101,1,'2023-03-28','2023-03-02', '$15.00');
 /*!40000 ALTER TABLE `checked_out_movies` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,6 +186,8 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES (1, '403-123-1234','Brad Davis');
+INSERT INTO `customer` VALUES (2, '587-123-1234','Stacy Graham');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -206,6 +212,8 @@ CREATE TABLE `dependant` (
 
 LOCK TABLES `dependant` WRITE;
 /*!40000 ALTER TABLE `dependant` DISABLE KEYS */;
+INSERT INTO `dependant` VALUES (1,'Jim');
+INSERT INTO `dependant` VALUES (2,'Robert');
 /*!40000 ALTER TABLE `dependant` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -231,6 +239,8 @@ CREATE TABLE `employee` (
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
 INSERT INTO `employee` VALUES (1,'John','Smith');
+INSERT INTO `employee` VALUES (2,'Stuart','Little');
+INSERT INTO `employee` VALUES (3,'Jack','Black');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,7 +253,7 @@ DROP TABLE IF EXISTS `journal`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `journal` (
   `ProductID` int NOT NULL,
-  `Title` varchar(45) NOT NULL,
+  `Title` varchar(100) NOT NULL,
   `Status` varchar(45) NOT NULL,
   `JournalAdminID` int NOT NULL,
   `Genre` varchar(45) NOT NULL,
@@ -261,6 +271,7 @@ CREATE TABLE `journal` (
 
 LOCK TABLES `journal` WRITE;
 /*!40000 ALTER TABLE `journal` DISABLE KEYS */;
+INSERT INTO `journal` VALUES (201,'GREEN SPACES AND PUBLIC HEALTH IN URBAN AREAS','Available', 1,'Academic','Claudiu CICEA',1);
 /*!40000 ALTER TABLE `journal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,6 +303,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
+INSERT INTO `movie` VALUES (101,'Avatar','James Cameron',3,'Available',1,'Science Fiction',1);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
