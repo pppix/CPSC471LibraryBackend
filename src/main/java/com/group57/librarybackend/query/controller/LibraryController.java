@@ -292,7 +292,7 @@ public class LibraryController {
     public ResponseEntity register(@RequestBody Customer customer) {
         try {
             customerRepo.save(customer);
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>(customer, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
